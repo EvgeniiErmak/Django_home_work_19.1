@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import os
 
+
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         try:
@@ -18,6 +19,7 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         except FileNotFoundError:
             # Если файл не найден, возвращаем ошибку 404
             self.send_error(404, 'File Not Found: index.html')
+
 
 if __name__ == '__main__':
     # Задаем хост и порт
